@@ -39,13 +39,16 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import coil.compose.AsyncImage
 import coil.request.ImageRequest
+import com.books.app.data.BookPageFactory
+import com.books.app.ui.Book
 import com.books.app.ui.BookPage
 import com.books.app.ui.theme.PagerItemSelectedColor
 import com.books.app.ui.theme.PagerItemUnselectedColor
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
 
-private val animationSpecs = spring<Float>(stiffness = Spring.StiffnessMediumLow)
+private val animationSpecs =
+    spring<Float>(stiffness = Spring.StiffnessMediumLow)
 
 @OptIn(ExperimentalFoundationApi::class)
 @Composable
@@ -58,33 +61,19 @@ fun BooksPager(
 ) {
     fun scrollToRight() {
         coroutineScope.launch {
-            if (pagerState.currentPage == items.lastIndex) {
-                pagerState.animateScrollToPage(
-                    0,
-                    animationSpec = animationSpecs
-                )
-            } else {
-                pagerState.animateScrollToPage(
-                    pagerState.currentPage + 1,
-                    animationSpec = animationSpecs
-                )
-            }
+            pagerState.animateScrollToPage(
+                if (pagerState.currentPage == items.lastIndex) 0 else pagerState.currentPage + 1,
+                animationSpec = animationSpecs
+            )
         }
     }
 
     fun scrollToLeft() {
         coroutineScope.launch {
-            if (pagerState.currentPage == 0) {
-                pagerState.animateScrollToPage(
-                    items.lastIndex,
-                    animationSpec = animationSpecs
-                )
-            } else {
-                pagerState.animateScrollToPage(
-                    pagerState.currentPage - 1,
-                    animationSpec = animationSpecs
-                )
-            }
+            pagerState.animateScrollToPage(
+                if (pagerState.currentPage == 0) items.lastIndex else pagerState.currentPage - 1,
+                animationSpec = animationSpecs
+            )
         }
     }
 
@@ -92,7 +81,7 @@ fun BooksPager(
         HorizontalPager(
             state = pagerState,
 
-        ) { page ->
+            ) { page ->
             val item = items[page]
             BooksPagerItem(
                 item = item,
@@ -178,27 +167,9 @@ private fun BooksPagerItem(
 @Preview(showSystemUi = true, showBackground = true)
 @Composable
 fun Preview_BooksPagerItem() {
-    val books = listOf(
-        BookPage(
-            1,
-            "https://images.unsplash.com/photo-1719937206255-cc337bccfc7d?q=80&w=2970&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-        ),
-        BookPage(
-            2,
-            "https://images.unsplash.com/photo-1719937206255-cc337bccfc7d?q=80&w=2970&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-        ),
-        BookPage(
-            3,
-            "https://images.unsplash.com/photo-1722486110900-cfb036cf1830?q=80&w=3174&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-        ),
-        BookPage(
-            4,
-            "https://images.unsplash.com/photo-1720048170996-40507a45c720?q=80&w=3113&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-        ),
-    )
     BooksPager(
-        items = books,
+        items = BookPageFactory.pages,
         onItemClicked = { /*TODO*/ },
-        pagerState = rememberPagerState { books.size }
+        pagerState = rememberPagerState { BookPageFactory.pages.size }
     )
 }
