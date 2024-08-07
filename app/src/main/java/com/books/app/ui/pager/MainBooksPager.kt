@@ -2,13 +2,9 @@ package com.books.app.ui.pager
 
 import androidx.compose.animation.core.Spring
 import androidx.compose.animation.core.spring
-import androidx.compose.animation.rememberSplineBasedDecay
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.background
 import androidx.compose.foundation.gestures.detectHorizontalDragGestures
-import androidx.compose.foundation.gestures.snapping.SnapFlingBehavior
-import androidx.compose.foundation.gestures.snapping.SnapLayoutInfoProvider
-import androidx.compose.foundation.gestures.snapping.rememberSnapFlingBehavior
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.BoxScope
@@ -19,8 +15,6 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.pager.HorizontalPager
-import androidx.compose.foundation.pager.PagerDefaults
-import androidx.compose.foundation.pager.PagerSnapDistance
 import androidx.compose.foundation.pager.PagerState
 import androidx.compose.foundation.pager.rememberPagerState
 import androidx.compose.foundation.shape.CircleShape
@@ -40,10 +34,14 @@ import androidx.compose.ui.unit.dp
 import coil.compose.AsyncImage
 import coil.request.ImageRequest
 import com.books.app.data.BookPageFactory
-import com.books.app.ui.Book
 import com.books.app.ui.BookPage
-import com.books.app.ui.theme.PagerItemSelectedColor
-import com.books.app.ui.theme.PagerItemUnselectedColor
+import com.books.app.ui.resources.PagerItemSelectedColor
+import com.books.app.ui.resources.PagerItemUnselectedColor
+import com.books.app.ui.resources._0_Dp
+import com.books.app.ui.resources._160_Dp
+import com.books.app.ui.resources._16_Dp
+import com.books.app.ui.resources._5_Dp
+import com.books.app.ui.resources._7_Dp
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
 
@@ -78,15 +76,11 @@ fun BooksPager(
     }
 
     Box(modifier = modifier.fillMaxWidth()) {
-        HorizontalPager(
-            state = pagerState,
-
-            ) { page ->
+        HorizontalPager(state = pagerState) { page ->
             val item = items[page]
             BooksPagerItem(
                 item = item,
                 modifier = Modifier
-                    .padding(horizontal = 8.dp)
                     .pointerInput(Unit) {
                         detectHorizontalDragGestures { change, dragAmount ->
                             change.consume()
@@ -119,7 +113,7 @@ private fun BoxScope.PagerProgress(
     Row(
         modifier = modifier
             .align(Alignment.BottomCenter)
-            .padding(7.dp),
+            .padding(_7_Dp),
         horizontalArrangement = Arrangement.Center
     ) {
         repeat(pageCount) { index ->
@@ -127,8 +121,8 @@ private fun BoxScope.PagerProgress(
                 if (currentPage == index) PagerItemSelectedColor else PagerItemUnselectedColor
             Box(
                 modifier = Modifier
-                    .padding(horizontal = 5.dp)
-                    .size(7.dp)
+                    .padding(horizontal = _5_Dp)
+                    .size(_7_Dp)
                     .clip(CircleShape)
                     .background(color)
             )
@@ -145,11 +139,11 @@ private fun BooksPagerItem(
 ) {
     Card(
         modifier = modifier
-            .height(160.dp)
+            .height(_160_Dp)
             .fillMaxWidth(),
         onClick = { onItemClick() },
-        elevation = CardDefaults.cardElevation(0.dp),
-        shape = RoundedCornerShape(16.dp)
+        elevation = CardDefaults.cardElevation(_0_Dp),
+        shape = RoundedCornerShape(_16_Dp)
     ) {
         AsyncImage(
             model = ImageRequest.Builder(LocalContext.current)

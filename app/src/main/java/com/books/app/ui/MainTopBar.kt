@@ -10,13 +10,13 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import com.books.app.R
-import com.books.app.ui.theme.BlackBackground
-import com.books.app.ui.theme.NunitoSans
-import com.books.app.ui.theme.TopBarTitleColor
+import com.books.app.ui.resources.BlackBackground
+import com.books.app.ui.resources.NunitoSans
+import com.books.app.ui.resources.TopBarTitleColor
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun TopBar(
+fun MainTopBar(
     modifier: Modifier = Modifier
 ) {
     TopAppBar(
@@ -37,5 +37,5 @@ fun TopBar(
 @Preview
 @Composable
 fun Preview_TopBar() {
-    TopBar()
+    MainTopBar()
 }
