@@ -30,11 +30,10 @@ import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.tooling.preview.Preview
-import androidx.compose.ui.unit.dp
 import coil.compose.AsyncImage
 import coil.request.ImageRequest
 import com.books.app.data.BookPageFactory
-import com.books.app.ui.BookPage
+import com.books.app.data.BookPage
 import com.books.app.ui.resources.PagerItemSelectedColor
 import com.books.app.ui.resources.PagerItemUnselectedColor
 import com.books.app.ui.resources._0_Dp

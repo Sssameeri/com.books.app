@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Books</string>
+    <string name="app_name">Book App</string>
     <string name="toolbar_main_screen_title">Library</string>
     <string name="back_button_accessibility_label">Back button</string>
 
@@ -10,4 +10,5 @@
     <string name="summary">Summary</string>
     <string name="you_will_also_like_title">You will also like</string>
     <string name="read_now_button_cta">Read Now</string>
+    <string name="splash_screen_description">Welcome to Book App</string>
 </resources>

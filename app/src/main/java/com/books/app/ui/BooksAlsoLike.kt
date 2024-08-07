@@ -10,6 +10,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.sp
 import com.books.app.R
+import com.books.app.data.Book
 import com.books.app.ui.resources.AlsoLikeBookCoverTitleColor
 import com.books.app.ui.resources.NunitoSans
 import com.books.app.ui.resources._16_Dp

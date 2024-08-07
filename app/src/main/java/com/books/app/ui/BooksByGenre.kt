@@ -8,6 +8,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.sp
+import com.books.app.data.Book
 import com.books.app.ui.resources.NunitoSans
 import com.books.app.ui.resources._14_Dp
 import com.books.app.ui.resources._16_Dp

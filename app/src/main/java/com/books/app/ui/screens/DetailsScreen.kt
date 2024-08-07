@@ -1,4 +1,4 @@
-package com.books.app.screens
+package com.books.app.ui.screens
 
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.Image

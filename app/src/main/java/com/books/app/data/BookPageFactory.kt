@@ -1,7 +1,5 @@
 package com.books.app.data
 
-import com.books.app.ui.BookPage
-
 object BookPageFactory {
     val pages = listOf(
         BookPage(

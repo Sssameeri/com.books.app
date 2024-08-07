@@ -30,7 +30,7 @@ import androidx.compose.ui.util.lerp
 import coil.compose.AsyncImage
 import coil.request.ImageRequest
 import com.books.app.data.BooksFactory
-import com.books.app.ui.Book
+import com.books.app.data.Book
 import com.books.app.ui.resources.NunitoSans
 import com.books.app.ui.resources._16_Dp
 import com.books.app.ui.resources._200_Dp

@@ -1,4 +1,4 @@
-package com.books.app.screens
+package com.books.app.ui.screens
 
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.LocalOverscrollConfiguration
@@ -39,7 +39,7 @@ fun MainScreen() {
                 .padding(paddingValues)
         ) {
             item {
-                //hack to disable overscroll and enable infinity scrolling
+                //hack to disable overscroll and enable "infinity" scrolling
                 CompositionLocalProvider(LocalOverscrollConfiguration provides null) {
                     BooksPager(
                         items = BookPageFactory.pages,
@@ -67,5 +67,5 @@ fun MainScreen() {
 @Preview
 @Composable
 fun Preview_MainScreen() {
-//    MainScreen()
+    MainScreen()
 }

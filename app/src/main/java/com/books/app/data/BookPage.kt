@@ -1,4 +1,4 @@
-package com.books.app.ui
+package com.books.app.data
 
 data class BookPage(
     val id: Int,
