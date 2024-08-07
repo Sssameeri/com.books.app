@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Books</string>
+    <string name="toolbar_main_screen_title">Library</string>
 </resources>
