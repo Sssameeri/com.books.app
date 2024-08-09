@@ -20,4 +20,9 @@ dependencyResolutionManagement {
 }
 
 rootProject.name = "Books"
-include(":app")
+
+include(
+    ":app",
+    ":core:common",
+    ":core:data"
+)
