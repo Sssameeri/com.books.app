@@ -25,10 +25,10 @@ import javax.inject.Provider;
     "cast",
     "deprecation"
 })
-public final class DataDI_ProvidesNetworkMonitorFactory implements Factory<NetworkMonitor> {
+public final class DataDi_ProvidesNetworkMonitorFactory implements Factory<NetworkMonitor> {
   private final Provider<Context> contextProvider;
 
-  public DataDI_ProvidesNetworkMonitorFactory(Provider<Context> contextProvider) {
+  public DataDi_ProvidesNetworkMonitorFactory(Provider<Context> contextProvider) {
     this.contextProvider = contextProvider;
   }
 
@@ -37,11 +37,11 @@ public final class DataDI_ProvidesNetworkMonitorFactory implements Factory<Netwo
     return providesNetworkMonitor(contextProvider.get());
   }
 
-  public static DataDI_ProvidesNetworkMonitorFactory create(Provider<Context> contextProvider) {
-    return new DataDI_ProvidesNetworkMonitorFactory(contextProvider);
+  public static DataDi_ProvidesNetworkMonitorFactory create(Provider<Context> contextProvider) {
+    return new DataDi_ProvidesNetworkMonitorFactory(contextProvider);
   }
 
   public static NetworkMonitor providesNetworkMonitor(Context context) {
-    return Preconditions.checkNotNullFromProvides(DataDI.INSTANCE.providesNetworkMonitor(context));
+    return Preconditions.checkNotNullFromProvides(DataDi.INSTANCE.providesNetworkMonitor(context));
   }
 }

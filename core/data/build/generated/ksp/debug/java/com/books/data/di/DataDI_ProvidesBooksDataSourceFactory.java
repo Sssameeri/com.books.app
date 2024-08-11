@@ -25,10 +25,10 @@ import javax.inject.Provider;
     "cast",
     "deprecation"
 })
-public final class DataDI_ProvidesBooksDataSourceFactory implements Factory<BooksDataSource> {
+public final class DataDi_ProvidesBooksDataSourceFactory implements Factory<BooksDataSource> {
   private final Provider<FirebaseHelper> firebaseHelperProvider;
 
-  public DataDI_ProvidesBooksDataSourceFactory(Provider<FirebaseHelper> firebaseHelperProvider) {
+  public DataDi_ProvidesBooksDataSourceFactory(Provider<FirebaseHelper> firebaseHelperProvider) {
     this.firebaseHelperProvider = firebaseHelperProvider;
   }
 
@@ -37,12 +37,12 @@ public final class DataDI_ProvidesBooksDataSourceFactory implements Factory<Book
     return providesBooksDataSource(firebaseHelperProvider.get());
   }
 
-  public static DataDI_ProvidesBooksDataSourceFactory create(
+  public static DataDi_ProvidesBooksDataSourceFactory create(
       Provider<FirebaseHelper> firebaseHelperProvider) {
-    return new DataDI_ProvidesBooksDataSourceFactory(firebaseHelperProvider);
+    return new DataDi_ProvidesBooksDataSourceFactory(firebaseHelperProvider);
   }
 
   public static BooksDataSource providesBooksDataSource(FirebaseHelper firebaseHelper) {
-    return Preconditions.checkNotNullFromProvides(DataDI.INSTANCE.providesBooksDataSource(firebaseHelper));
+    return Preconditions.checkNotNullFromProvides(DataDi.INSTANCE.providesBooksDataSource(firebaseHelper));
   }
 }

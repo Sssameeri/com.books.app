@@ -1,4 +1,4 @@
-#Fri Aug 09 15:20:00 CEST 2024
+#Sun Aug 11 20:50:11 CEST 2024
 base.0=/Users/andrii/AndroidStudioProjects/Books/core/data/build/intermediates/dex/debugAndroidTest/mergeExtDexDebugAndroidTest/classes.dex
 base.1=/Users/andrii/AndroidStudioProjects/Books/core/data/build/intermediates/dex/debugAndroidTest/mergeLibDexDebugAndroidTest/10/classes.dex
 base.2=/Users/andrii/AndroidStudioProjects/Books/core/data/build/intermediates/dex/debugAndroidTest/mergeLibDexDebugAndroidTest/13/classes.dex

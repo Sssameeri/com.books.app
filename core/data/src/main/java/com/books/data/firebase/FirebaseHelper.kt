@@ -21,17 +21,8 @@ class FirebaseHelper {
     fun fetchAndActivateValues() =
         firebaseRemoteConfig.fetchAndActivate()
 
-    fun activateFetchedValues() =
-        firebaseRemoteConfig.activate()
-
     fun getValueAsString(key: String) =
         firebaseRemoteConfig.getValue(key).asString()
-
-    fun fetchNewValues() =
-        firebaseRemoteConfig.fetch()
-
-    fun clearCache() =
-        firebaseRemoteConfig.reset()
 
 }
 

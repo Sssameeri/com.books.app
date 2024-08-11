@@ -7,12 +7,12 @@ import dagger.hilt.components.SingletonComponent;
 import javax.annotation.processing.Generated;
 
 @OriginatingElement(
-    topLevelClass = DataDI.class
+    topLevelClass = DataDi.class
 )
 @InstallIn(SingletonComponent.class)
 @Module(
-    includes = DataDI.class
+    includes = DataDi.class
 )
 @Generated("dagger.hilt.processor.internal.aggregateddeps.PkgPrivateModuleGenerator")
-public final class HiltWrapper_DataDI {
+public final class HiltWrapper_DataDi {
 }

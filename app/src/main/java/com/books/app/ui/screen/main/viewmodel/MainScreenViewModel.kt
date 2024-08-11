@@ -17,14 +17,8 @@ import javax.inject.Inject
 
 @HiltViewModel
 class MainScreenViewModel @Inject constructor(
-    private val repository: BooksRepository
+    repository: BooksRepository
 ) : ViewModel() {
-
-    fun loadData() {
-        viewModelScope.launch {
-            repository.fetchBooksData()
-        }
-    }
 
     val state: StateFlow<MainScreenState> = repository
         .observeBooksData()

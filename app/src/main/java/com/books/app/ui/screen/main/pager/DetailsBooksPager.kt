@@ -10,7 +10,6 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.pager.HorizontalPager
 import androidx.compose.foundation.pager.PageSize
 import androidx.compose.foundation.pager.PagerState
-import androidx.compose.foundation.pager.rememberPagerState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -24,15 +23,17 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
-import androidx.compose.ui.tooling.preview.Preview
-import androidx.compose.ui.unit.sp
 import androidx.compose.ui.util.lerp
 import coil.compose.AsyncImage
 import coil.request.ImageRequest
 import com.books.app.state.Book
 import com.books.app.ui.resources.NunitoSans
+import com.books.app.ui.resources._14_Sp
 import com.books.app.ui.resources._16_Dp
+import com.books.app.ui.resources._16_Sp
 import com.books.app.ui.resources._200_Dp
+import com.books.app.ui.resources._20_Sp
+import com.books.app.ui.resources._22_Sp
 import com.books.app.ui.resources._250_Dp
 import com.books.app.ui.resources._4_Dp
 import kotlin.math.absoluteValue
@@ -48,7 +49,8 @@ fun DetailsBookPager(
 ) {
     BoxWithConstraints(
         modifier = modifier
-            .fillMaxWidth()
+            .fillMaxWidth(),
+        contentAlignment = Alignment.TopCenter
     ) {
         val horizontalPadding = (this.maxWidth - IMAGE_SIZE_DP) / 2
         HorizontalPager(
@@ -66,8 +68,8 @@ fun DetailsBookPager(
                 modifier = Modifier
                     .graphicsLayer {
                         val pageOffset =
-                            ((pagerState.currentPage - page) + pagerState.currentPageOffsetFraction
-                                    ).absoluteValue
+                            ((pagerState.currentPage - page) + pagerState.currentPageOffsetFraction)
+                                .absoluteValue
                         val scale = lerp(
                             0.8f,
                             1f,
@@ -95,6 +97,7 @@ private fun BookPagerItem(
         AsyncImage(
             model = ImageRequest.Builder(LocalContext.current)
                 .data(book.coverImage)
+                .crossfade(true)
                 .build(),
             contentDescription = "Book name: ${book.coverTitle}",
             contentScale = ContentScale.Crop,
@@ -108,8 +111,8 @@ private fun BookPagerItem(
             fontFamily = NunitoSans,
             fontWeight = FontWeight.Bold,
             color = Color.White,
-            fontSize = 20.sp,
-            lineHeight = 22.sp,
+            fontSize = _20_Sp,
+            lineHeight = _22_Sp,
             textAlign = TextAlign.Center,
             maxLines = 2,
             overflow = TextOverflow.Ellipsis,
@@ -122,8 +125,8 @@ private fun BookPagerItem(
             fontFamily = NunitoSans,
             fontWeight = FontWeight.Bold,
             color = Color.White.copy(alpha = 0.8f),
-            fontSize = 14.sp,
-            lineHeight = 16.sp,
+            fontSize = _14_Sp,
+            lineHeight = _16_Sp,
             modifier = Modifier
                 .padding(top = _4_Dp)
         )

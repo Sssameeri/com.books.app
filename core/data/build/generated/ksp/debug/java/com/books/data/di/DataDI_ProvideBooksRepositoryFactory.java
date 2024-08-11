@@ -25,10 +25,10 @@ import javax.inject.Provider;
     "cast",
     "deprecation"
 })
-public final class DataDI_ProvideBooksRepositoryFactory implements Factory<BooksRepository> {
+public final class DataDi_ProvideBooksRepositoryFactory implements Factory<BooksRepository> {
   private final Provider<BooksDataSource> dataSourceProvider;
 
-  public DataDI_ProvideBooksRepositoryFactory(Provider<BooksDataSource> dataSourceProvider) {
+  public DataDi_ProvideBooksRepositoryFactory(Provider<BooksDataSource> dataSourceProvider) {
     this.dataSourceProvider = dataSourceProvider;
   }
 
@@ -37,12 +37,12 @@ public final class DataDI_ProvideBooksRepositoryFactory implements Factory<Books
     return provideBooksRepository(dataSourceProvider.get());
   }
 
-  public static DataDI_ProvideBooksRepositoryFactory create(
+  public static DataDi_ProvideBooksRepositoryFactory create(
       Provider<BooksDataSource> dataSourceProvider) {
-    return new DataDI_ProvideBooksRepositoryFactory(dataSourceProvider);
+    return new DataDi_ProvideBooksRepositoryFactory(dataSourceProvider);
   }
 
   public static BooksRepository provideBooksRepository(BooksDataSource dataSource) {
-    return Preconditions.checkNotNullFromProvides(DataDI.INSTANCE.provideBooksRepository(dataSource));
+    return Preconditions.checkNotNullFromProvides(DataDi.INSTANCE.provideBooksRepository(dataSource));
   }
 }

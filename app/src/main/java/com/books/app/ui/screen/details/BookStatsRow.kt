@@ -12,10 +12,14 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
-import androidx.compose.ui.unit.sp
 import com.books.app.ui.resources.NunitoSans
 import com.books.app.ui.resources.StatsDataColor
 import com.books.app.ui.resources.StatsDescriptionColor
+import com.books.app.ui.resources._01_Sp
+import com.books.app.ui.resources._12_Sp
+import com.books.app.ui.resources._13_Sp
+import com.books.app.ui.resources._18_Sp
+import com.books.app.ui.resources._22_Sp
 
 @Composable
 fun BookStatsRow(
@@ -49,18 +53,18 @@ private fun BookStatsItem(
             color = StatsDataColor,
             fontFamily = NunitoSans,
             fontWeight = FontWeight.Bold,
-            lineHeight = 22.sp,
-            fontSize = 18.sp,
-            letterSpacing = 0.1.sp
+            lineHeight = _22_Sp,
+            fontSize = _18_Sp,
+            letterSpacing = _01_Sp
         )
         Text(
             text = stringResource(id = statsProperty.property.res),
             color = StatsDescriptionColor,
             fontFamily = NunitoSans,
             fontWeight = FontWeight.SemiBold,
-            lineHeight = 13.sp,
-            fontSize = 12.sp,
-            letterSpacing = 0.1.sp
+            lineHeight = _13_Sp,
+            fontSize = _12_Sp,
+            letterSpacing = _01_Sp
         )
     }
 }

@@ -146,6 +146,7 @@ private fun BooksPagerItem(
         AsyncImage(
             model = ImageRequest.Builder(LocalContext.current)
                 .data(item.imageUrl)
+                .crossfade(true)
                 .build(),
             modifier = Modifier.fillMaxSize(),
             contentDescription = contentDescription,

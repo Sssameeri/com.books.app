@@ -1,6 +1,5 @@
 package com.books.app.ui.dialog
 
-import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Text
@@ -11,12 +10,12 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
-import androidx.compose.ui.unit.sp
 import com.books.app.ui.common.RoundedButton
 import com.books.app.ui.resources.BlackBackground
 import com.books.app.ui.resources.NunitoSans
 import com.books.app.ui.resources.ReadNowButtonColor
 import com.books.app.ui.resources._16_Dp
+import com.books.app.ui.resources._16_Sp
 
 @Composable
 fun BooksAlertDialog(
@@ -42,7 +41,7 @@ fun BooksAlertDialog(
                 fontFamily = NunitoSans,
                 fontWeight = FontWeight.ExtraBold,
                 color = Color.White,
-                lineHeight = 16.sp,
+                lineHeight = _16_Sp,
                 textAlign = TextAlign.Center
             )
         },

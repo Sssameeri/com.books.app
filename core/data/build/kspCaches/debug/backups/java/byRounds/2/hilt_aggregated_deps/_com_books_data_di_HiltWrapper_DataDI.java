@@ -8,8 +8,8 @@ import javax.annotation.processing.Generated;
  */
 @AggregatedDeps(
     components = "dagger.hilt.components.SingletonComponent",
-    modules = "com.books.data.di.HiltWrapper_DataDI"
+    modules = "com.books.data.di.HiltWrapper_DataDi"
 )
 @Generated("dagger.hilt.processor.internal.aggregateddeps.AggregatedDepsGenerator")
-public class _com_books_data_di_HiltWrapper_DataDI {
+public class _com_books_data_di_HiltWrapper_DataDi {
 }

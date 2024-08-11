@@ -6,9 +6,11 @@ import androidx.navigation.NavType
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.navArgument
+import com.books.app.navigation.BooksAppNavigation.*
 import com.books.app.ui.BooksAppState
 import com.books.app.ui.screen.details.DetailsScreen
 import com.books.app.ui.screen.main.MainScreen
+import com.books.app.ui.screen.splash.SplashScreen
 
 @Composable
 fun BooksNavHost(
@@ -17,20 +19,27 @@ fun BooksNavHost(
 ) {
     NavHost(
         navController = appState.navController,
-        startDestination = BooksAppNavigation.Main.route,
+        startDestination = Splash.route,
         modifier = modifier
     ) {
-        composable(BooksAppNavigation.Main.route) {
+        composable(Splash.route) {
+            SplashScreen(
+                onAppReady = appState::navigateMainScreen,
+                onConfirmAlertDialog = appState::finishActivity
+            )
+        }
+        composable(Main.route) {
             MainScreen(
-                onBookClicked = { id -> appState.navigateDetailsScreen(id) }
+                onBackPressed = appState::finishActivity,
+                onBookClicked = appState::navigateDetailsScreen
             )
         }
         composable(
-            BooksAppNavigation.Details.route,
+            Details.route,
             arguments = listOf(navArgument(ARG_BOOK_ID_KEY) { type = NavType.StringType })
         ) {
             DetailsScreen(
-                onBackClick = { appState.navigateBack() }
+                onBackClick = appState::navigateBack
             )
         }
     }
@@ -39,6 +48,7 @@ fun BooksNavHost(
 const val ARG_BOOK_ID_KEY = "bookId"
 
 sealed class BooksAppNavigation(val route: String) {
+    data object Splash : BooksAppNavigation("splash")
     data object Main : BooksAppNavigation("main")
     data object Details : BooksAppNavigation("details/{$ARG_BOOK_ID_KEY}") {
         fun createRoute(bookId: Int) = "details/$bookId"

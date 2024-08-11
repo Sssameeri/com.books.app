@@ -20,13 +20,15 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
-import androidx.compose.ui.unit.sp
 import coil.compose.AsyncImage
 import coil.request.ImageRequest
 import com.books.app.state.Book
 import com.books.app.ui.resources.NunitoSans
+import com.books.app.ui.resources._01_Sp
 import com.books.app.ui.resources._120_Dp
 import com.books.app.ui.resources._16_Dp
+import com.books.app.ui.resources._16_Sp
+import com.books.app.ui.resources._17_Sp
 import com.books.app.ui.resources._4_Dp
 import com.books.app.ui.resources._8_Dp
 
@@ -48,9 +50,9 @@ fun BookListRow(
             BookListItem(
                 book = it,
                 textColor = textColor,
+                onBookClick = onBookClick,
                 modifier = Modifier
                     .width(_120_Dp)
-                    .clickable { onBookClick(it.id) }
             )
         }
     }
@@ -60,6 +62,7 @@ fun BookListRow(
 private fun BookListItem(
     book: Book,
     textColor: Color,
+    onBookClick: (Int) -> Unit,
     modifier: Modifier = Modifier,
     contentDescription: String = "book item"
 ) {
@@ -67,6 +70,7 @@ private fun BookListItem(
         AsyncImage(
             model = ImageRequest.Builder(LocalContext.current)
                 .data(book.coverImage)
+                .crossfade(true)
                 .build(),
             contentDescription = contentDescription,
             contentScale = ContentScale.Crop,
@@ -74,6 +78,7 @@ private fun BookListItem(
                 .aspectRatio(0.8f)
                 .fillMaxSize()
                 .clip(RoundedCornerShape(_16_Dp))
+                .clickable { onBookClick(book.id) }
         )
 
         Text(
@@ -82,9 +87,9 @@ private fun BookListItem(
             fontWeight = FontWeight.SemiBold,
             maxLines = 2,
             textAlign = TextAlign.Left,
-            fontSize = 16.sp,
-            lineHeight = 17.sp,
-            letterSpacing = 0.1.sp,
+            fontSize = _16_Sp,
+            lineHeight = _17_Sp,
+            letterSpacing = _01_Sp,
             overflow = TextOverflow.Ellipsis,
             color = textColor,
             modifier = Modifier.padding(top = _4_Dp)

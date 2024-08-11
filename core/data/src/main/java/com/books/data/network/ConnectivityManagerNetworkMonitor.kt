@@ -17,7 +17,7 @@ import kotlinx.coroutines.flow.flowOn
 
 internal class ConnectivityManagerNetworkMonitor(
     private val context: Context,
-    private val dispatcher: CoroutineDispatcher = Dispatchers.IO
+    dispatcher: CoroutineDispatcher = Dispatchers.IO
 ) : NetworkMonitor {
 
     override val isOnline: Flow<Boolean> = callbackFlow {
@@ -58,7 +58,6 @@ internal class ConnectivityManagerNetworkMonitor(
         .flowOn(dispatcher)
         .conflate()
 
-    @Suppress("DEPRECATION")
     private fun ConnectivityManager.isCurrentlyConnected() =
         activeNetwork
             ?.let(::getNetworkCapabilities)

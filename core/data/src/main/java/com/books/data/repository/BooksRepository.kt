@@ -12,6 +12,5 @@ interface BooksRepository {
     //like UseCases but without domain layer
     fun observeBannersData(): Flow<List<BannerItemApiModel>>
     fun observeBooksData(): Flow<List<BookItemApiModel>>
-
     suspend fun getRecommendations(): List<BookItemApiModel>
 }

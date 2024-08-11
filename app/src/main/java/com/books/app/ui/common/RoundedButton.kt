@@ -9,9 +9,9 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
-import androidx.compose.ui.unit.sp
 import com.books.app.ui.resources.NunitoSans
 import com.books.app.ui.resources.ReadNowButtonColor
+import com.books.app.ui.resources._16_Sp
 import com.books.app.ui.resources._30_Dp
 
 @Composable
@@ -31,8 +31,8 @@ fun RoundedButton(
             text = cta,
             fontFamily = NunitoSans,
             fontWeight = FontWeight.ExtraBold,
-            fontSize = 16.sp,
-            lineHeight = 16.sp
+            fontSize = _16_Sp,
+            lineHeight = _16_Sp
         )
     }
 }
