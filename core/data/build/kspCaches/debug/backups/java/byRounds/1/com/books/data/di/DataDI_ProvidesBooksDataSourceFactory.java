@@ -1,7 +1,7 @@
 package com.books.data.di;
 
-import com.books.data.firebase.FirebaseHelper;
 import com.books.data.source.BooksDataSource;
+import com.books.firebase.FirebaseHelper;
 import dagger.internal.DaggerGenerated;
 import dagger.internal.Factory;
 import dagger.internal.Preconditions;

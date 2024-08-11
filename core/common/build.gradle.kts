@@ -3,7 +3,6 @@ import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 plugins {
     alias(libs.plugins.kotlin.jvm)
     alias(libs.plugins.kps)
-    alias(libs.plugins.kotlinx.serialization)
 }
 
 java {
@@ -19,7 +18,7 @@ kotlin {
 
 dependencies {
     implementation(libs.kotlinx.coroutines.core)
-    implementation(libs.kotlinx.json)
+    
     implementation(libs.hilt.core)
     ksp(libs.hilt.compiler)
 }

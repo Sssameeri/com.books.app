@@ -1,0 +1,19 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.books.firebase.test.firebase-mergeDebugAndroidTestResources-19:/values-en-rXC/values-en-rXC.xml",
+            "map": [
+                {
+                    "source": "/Users/andrii/.gradle/caches/transforms-4/c63f70066713d1ac44a0f56bcd9fc19e/transformed/core-1.9.0/res/values-en-rXC/values-en-rXC.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "203",
+                        "endOffsets": "254"
+                    }
+                }
+            ]
+        }
+    ]
+}

@@ -16,4 +16,5 @@ plugins {
     alias(libs.plugins.compose.compilter) apply false
     alias(libs.plugins.kps) apply false
     alias(libs.plugins.hilt) apply false
+    alias(libs.plugins.crashlytics) apply false
 }

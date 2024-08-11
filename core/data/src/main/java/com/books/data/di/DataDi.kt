@@ -1,13 +1,13 @@
 package com.books.data.di
 
 import android.content.Context
-import com.books.data.firebase.FirebaseHelper
 import com.books.data.network.ConnectivityManagerNetworkMonitor
 import com.books.data.network.NetworkMonitor
 import com.books.data.repository.BooksRepository
 import com.books.data.repository.RemoteBooksRepository
 import com.books.data.source.BooksDataSource
 import com.books.data.source.FirebaseBooksDataSource
+import com.books.firebase.FirebaseHelper
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

@@ -5,6 +5,7 @@ plugins {
     alias(libs.plugins.compose.compilter)
     alias(libs.plugins.kps)
     alias(libs.plugins.hilt)
+    alias(libs.plugins.crashlytics)
 }
 
 android {
@@ -74,6 +75,9 @@ dependencies {
     implementation(libs.hilt.navigation.compose)
     implementation(libs.androidx.lifecycle.runtimeCompose)
 
+    implementation(platform(libs.firebase.bom))
+    implementation(libs.firebase.analytics)
+    implementation(libs.firebase.crashlytics)
 
     implementation(libs.coil)
     implementation(libs.hilt.core)
@@ -81,5 +85,6 @@ dependencies {
     ksp(libs.hilt.compiler)
 
     implementation(project(":core:common"))
+    implementation(project(":core:firebase"))
     implementation(project(":core:data"))
 }

@@ -1,0 +1,14 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /Users/andrii/AndroidStudioProjects/Books/core/firebase/src/main/AndroidManifest.xml:2:1-13
+INJECTED from /Users/andrii/AndroidStudioProjects/Books/core/firebase/src/main/AndroidManifest.xml:2:1-13
+	package
+		INJECTED from /Users/andrii/AndroidStudioProjects/Books/core/firebase/src/main/AndroidManifest.xml
+uses-sdk
+INJECTED from /Users/andrii/AndroidStudioProjects/Books/core/firebase/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /Users/andrii/AndroidStudioProjects/Books/core/firebase/src/main/AndroidManifest.xml
+INJECTED from /Users/andrii/AndroidStudioProjects/Books/core/firebase/src/main/AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from /Users/andrii/AndroidStudioProjects/Books/core/firebase/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /Users/andrii/AndroidStudioProjects/Books/core/firebase/src/main/AndroidManifest.xml

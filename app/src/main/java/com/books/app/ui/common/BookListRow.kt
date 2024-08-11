@@ -23,7 +23,7 @@ import androidx.compose.ui.text.style.TextOverflow
 import coil.compose.AsyncImage
 import coil.request.CachePolicy
 import coil.request.ImageRequest
-import com.books.app.state.Book
+import com.books.app.ui.common.state.Book
 import com.books.app.ui.resources.NunitoSans
 import com.books.app.ui.resources._01_Sp
 import com.books.app.ui.resources._120_Dp

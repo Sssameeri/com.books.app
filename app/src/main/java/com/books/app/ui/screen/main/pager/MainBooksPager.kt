@@ -30,7 +30,7 @@ import androidx.compose.ui.platform.LocalContext
 import coil.compose.AsyncImage
 import coil.request.CachePolicy
 import coil.request.ImageRequest
-import com.books.app.state.PagerItem
+import com.books.app.ui.common.state.PagerItem
 import com.books.app.ui.resources.PagerItemSelectedColor
 import com.books.app.ui.resources.PagerItemUnselectedColor
 import com.books.app.ui.resources._160_Dp

@@ -1,7 +1,7 @@
 package com.books.app.ui.screen.main.viewmodel
 
-import com.books.app.state.Book
-import com.books.app.state.PagerItem
+import com.books.app.ui.common.state.Book
+import com.books.app.ui.common.state.PagerItem
 import com.books.data.model.BannerItemApiModel
 import com.books.data.model.BookItemApiModel
 

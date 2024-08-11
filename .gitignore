@@ -16,3 +16,4 @@ local.properties
 /.idea/
 /core/data/build/
 /core/common/build/
+.kotlin/

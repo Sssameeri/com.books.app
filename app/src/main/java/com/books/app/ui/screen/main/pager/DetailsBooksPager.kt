@@ -27,7 +27,7 @@ import androidx.compose.ui.util.lerp
 import coil.compose.AsyncImage
 import coil.request.CachePolicy
 import coil.request.ImageRequest
-import com.books.app.state.Book
+import com.books.app.ui.common.state.Book
 import com.books.app.ui.resources.NunitoSans
 import com.books.app.ui.resources._14_Sp
 import com.books.app.ui.resources._16_Dp

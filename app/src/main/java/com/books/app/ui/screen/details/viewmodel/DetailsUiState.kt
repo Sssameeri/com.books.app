@@ -1,6 +1,6 @@
 package com.books.app.ui.screen.details.viewmodel
 
-import com.books.app.state.Book
+import com.books.app.ui.common.state.Book
 import com.books.data.model.BookItemApiModel
 
 sealed class DetailsUiState {

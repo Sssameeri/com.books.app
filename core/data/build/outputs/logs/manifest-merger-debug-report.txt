@@ -1,7 +1,7 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/andrii/AndroidStudioProjects/Books/core/data/src/main/AndroidManifest.xml:2:1-5:12
-INJECTED from /Users/andrii/AndroidStudioProjects/Books/core/data/src/main/AndroidManifest.xml:2:1-5:12
+ADDED from /Users/andrii/AndroidStudioProjects/Books/core/data/src/main/AndroidManifest.xml:2:1-6:12
+INJECTED from /Users/andrii/AndroidStudioProjects/Books/core/data/src/main/AndroidManifest.xml:2:1-6:12
 	package
 		INJECTED from /Users/andrii/AndroidStudioProjects/Books/core/data/src/main/AndroidManifest.xml
 	xmlns:android

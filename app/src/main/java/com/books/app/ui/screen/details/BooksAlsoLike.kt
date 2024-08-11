@@ -9,7 +9,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import com.books.app.R
-import com.books.app.state.Book
+import com.books.app.ui.common.state.Book
 import com.books.app.ui.common.BookListRow
 import com.books.app.ui.resources.AlsoLikeBookCoverTitleColor
 import com.books.app.ui.resources.NunitoSans

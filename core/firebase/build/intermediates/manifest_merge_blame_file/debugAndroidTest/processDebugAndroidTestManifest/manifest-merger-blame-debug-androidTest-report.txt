@@ -1,0 +1,253 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.books.firebase.test" >
+4
+5    <uses-sdk
+5-->/Users/andrii/AndroidStudioProjects/Books/core/firebase/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest4862453332132431966.xml:5:5-74
+6        android:minSdkVersion="24"
+6-->/Users/andrii/AndroidStudioProjects/Books/core/firebase/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest4862453332132431966.xml:5:15-41
+7        android:targetSdkVersion="24" />
+7-->/Users/andrii/AndroidStudioProjects/Books/core/firebase/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest4862453332132431966.xml:5:42-71
+8
+9    <instrumentation
+9-->/Users/andrii/AndroidStudioProjects/Books/core/firebase/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest4862453332132431966.xml:11:5-15:73
+10        android:name="android.test.InstrumentationTestRunner"
+10-->/Users/andrii/AndroidStudioProjects/Books/core/firebase/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest4862453332132431966.xml:11:22-75
+11        android:functionalTest="false"
+11-->/Users/andrii/AndroidStudioProjects/Books/core/firebase/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest4862453332132431966.xml:14:22-52
+12        android:handleProfiling="false"
+12-->/Users/andrii/AndroidStudioProjects/Books/core/firebase/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest4862453332132431966.xml:13:22-53
+13        android:label="Tests for com.books.firebase.test"
+13-->/Users/andrii/AndroidStudioProjects/Books/core/firebase/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest4862453332132431966.xml:15:22-71
+14        android:targetPackage="com.books.firebase.test" />
+14-->/Users/andrii/AndroidStudioProjects/Books/core/firebase/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest4862453332132431966.xml:12:22-69
+15
+16    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+16-->[com.google.firebase:firebase-config:22.0.0] /Users/andrii/.gradle/caches/transforms-4/dc8aa06a70af34fda7867507fbcefd00/transformed/firebase-config-22.0.0/AndroidManifest.xml:22:5-79
+16-->[com.google.firebase:firebase-config:22.0.0] /Users/andrii/.gradle/caches/transforms-4/dc8aa06a70af34fda7867507fbcefd00/transformed/firebase-config-22.0.0/AndroidManifest.xml:22:22-76
+17    <uses-permission android:name="android.permission.INTERNET" />
+17-->[com.google.firebase:firebase-config:22.0.0] /Users/andrii/.gradle/caches/transforms-4/dc8aa06a70af34fda7867507fbcefd00/transformed/firebase-config-22.0.0/AndroidManifest.xml:23:5-67
+17-->[com.google.firebase:firebase-config:22.0.0] /Users/andrii/.gradle/caches/transforms-4/dc8aa06a70af34fda7867507fbcefd00/transformed/firebase-config-22.0.0/AndroidManifest.xml:23:22-64
+18    <uses-permission android:name="android.permission.WAKE_LOCK" />
+18-->[com.google.android.gms:play-services-measurement:22.0.2] /Users/andrii/.gradle/caches/transforms-4/82d2cbcb153c73aed19ac696a3181799/transformed/play-services-measurement-22.0.2/AndroidManifest.xml:25:5-68
+18-->[com.google.android.gms:play-services-measurement:22.0.2] /Users/andrii/.gradle/caches/transforms-4/82d2cbcb153c73aed19ac696a3181799/transformed/play-services-measurement-22.0.2/AndroidManifest.xml:25:22-65
+19    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE" />
+19-->[com.google.android.gms:play-services-measurement:22.0.2] /Users/andrii/.gradle/caches/transforms-4/82d2cbcb153c73aed19ac696a3181799/transformed/play-services-measurement-22.0.2/AndroidManifest.xml:26:5-110
+19-->[com.google.android.gms:play-services-measurement:22.0.2] /Users/andrii/.gradle/caches/transforms-4/82d2cbcb153c73aed19ac696a3181799/transformed/play-services-measurement-22.0.2/AndroidManifest.xml:26:22-107
+20    <uses-permission android:name="com.google.android.gms.permission.AD_ID" />
+20-->[com.google.android.gms:play-services-measurement-api:22.0.2] /Users/andrii/.gradle/caches/transforms-4/708d7f4387c2f223069b5b73dcea6aea/transformed/play-services-measurement-api-22.0.2/AndroidManifest.xml:25:5-79
+20-->[com.google.android.gms:play-services-measurement-api:22.0.2] /Users/andrii/.gradle/caches/transforms-4/708d7f4387c2f223069b5b73dcea6aea/transformed/play-services-measurement-api-22.0.2/AndroidManifest.xml:25:22-76
+21    <uses-permission android:name="android.permission.ACCESS_ADSERVICES_ATTRIBUTION" />
+21-->[com.google.android.gms:play-services-measurement-api:22.0.2] /Users/andrii/.gradle/caches/transforms-4/708d7f4387c2f223069b5b73dcea6aea/transformed/play-services-measurement-api-22.0.2/AndroidManifest.xml:26:5-88
+21-->[com.google.android.gms:play-services-measurement-api:22.0.2] /Users/andrii/.gradle/caches/transforms-4/708d7f4387c2f223069b5b73dcea6aea/transformed/play-services-measurement-api-22.0.2/AndroidManifest.xml:26:22-85
+22    <uses-permission android:name="android.permission.ACCESS_ADSERVICES_AD_ID" />
+22-->[com.google.android.gms:play-services-measurement-api:22.0.2] /Users/andrii/.gradle/caches/transforms-4/708d7f4387c2f223069b5b73dcea6aea/transformed/play-services-measurement-api-22.0.2/AndroidManifest.xml:27:5-82
+22-->[com.google.android.gms:play-services-measurement-api:22.0.2] /Users/andrii/.gradle/caches/transforms-4/708d7f4387c2f223069b5b73dcea6aea/transformed/play-services-measurement-api-22.0.2/AndroidManifest.xml:27:22-79
+23
+24    <permission
+24-->[androidx.core:core:1.9.0] /Users/andrii/.gradle/caches/transforms-4/c63f70066713d1ac44a0f56bcd9fc19e/transformed/core-1.9.0/AndroidManifest.xml:22:5-24:47
+25        android:name="com.books.firebase.test.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+25-->[androidx.core:core:1.9.0] /Users/andrii/.gradle/caches/transforms-4/c63f70066713d1ac44a0f56bcd9fc19e/transformed/core-1.9.0/AndroidManifest.xml:23:9-81
+26        android:protectionLevel="signature" />
+26-->[androidx.core:core:1.9.0] /Users/andrii/.gradle/caches/transforms-4/c63f70066713d1ac44a0f56bcd9fc19e/transformed/core-1.9.0/AndroidManifest.xml:24:9-44
+27
+28    <uses-permission android:name="com.books.firebase.test.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+28-->[androidx.core:core:1.9.0] /Users/andrii/.gradle/caches/transforms-4/c63f70066713d1ac44a0f56bcd9fc19e/transformed/core-1.9.0/AndroidManifest.xml:26:5-97
+28-->[androidx.core:core:1.9.0] /Users/andrii/.gradle/caches/transforms-4/c63f70066713d1ac44a0f56bcd9fc19e/transformed/core-1.9.0/AndroidManifest.xml:26:22-94
+29
+30    <application
+30-->/Users/andrii/AndroidStudioProjects/Books/core/firebase/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest4862453332132431966.xml:7:5-9:19
+31        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+31-->[androidx.core:core:1.9.0] /Users/andrii/.gradle/caches/transforms-4/c63f70066713d1ac44a0f56bcd9fc19e/transformed/core-1.9.0/AndroidManifest.xml:28:18-86
+32        android:debuggable="true"
+33        android:extractNativeLibs="false" >
+34        <uses-library android:name="android.test.runner" />
+34-->/Users/andrii/AndroidStudioProjects/Books/core/firebase/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest4862453332132431966.xml:8:9-60
+34-->/Users/andrii/AndroidStudioProjects/Books/core/firebase/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest4862453332132431966.xml:8:23-57
+35
+36        <service
+36-->[com.google.firebase:firebase-config:22.0.0] /Users/andrii/.gradle/caches/transforms-4/dc8aa06a70af34fda7867507fbcefd00/transformed/firebase-config-22.0.0/AndroidManifest.xml:26:9-35:19
+37            android:name="com.google.firebase.components.ComponentDiscoveryService"
+37-->[com.google.firebase:firebase-config:22.0.0] /Users/andrii/.gradle/caches/transforms-4/dc8aa06a70af34fda7867507fbcefd00/transformed/firebase-config-22.0.0/AndroidManifest.xml:27:13-84
+38            android:directBootAware="true"
+38-->[com.google.firebase:firebase-common:21.0.0] /Users/andrii/.gradle/caches/transforms-4/11aa06243bcda13bf8476fa92b4d855f/transformed/firebase-common-21.0.0/AndroidManifest.xml:32:13-43
+39            android:exported="false" >
+39-->[com.google.firebase:firebase-config:22.0.0] /Users/andrii/.gradle/caches/transforms-4/dc8aa06a70af34fda7867507fbcefd00/transformed/firebase-config-22.0.0/AndroidManifest.xml:28:13-37
+40            <meta-data
+40-->[com.google.firebase:firebase-config:22.0.0] /Users/andrii/.gradle/caches/transforms-4/dc8aa06a70af34fda7867507fbcefd00/transformed/firebase-config-22.0.0/AndroidManifest.xml:29:13-31:85
+41                android:name="com.google.firebase.components:com.google.firebase.remoteconfig.FirebaseRemoteConfigKtxRegistrar"
+41-->[com.google.firebase:firebase-config:22.0.0] /Users/andrii/.gradle/caches/transforms-4/dc8aa06a70af34fda7867507fbcefd00/transformed/firebase-config-22.0.0/AndroidManifest.xml:30:17-128
+42                android:value="com.google.firebase.components.ComponentRegistrar" />
+42-->[com.google.firebase:firebase-config:22.0.0] /Users/andrii/.gradle/caches/transforms-4/dc8aa06a70af34fda7867507fbcefd00/transformed/firebase-config-22.0.0/AndroidManifest.xml:31:17-82
+43            <meta-data
+43-->[com.google.firebase:firebase-config:22.0.0] /Users/andrii/.gradle/caches/transforms-4/dc8aa06a70af34fda7867507fbcefd00/transformed/firebase-config-22.0.0/AndroidManifest.xml:32:13-34:85
+44                android:name="com.google.firebase.components:com.google.firebase.remoteconfig.RemoteConfigRegistrar"
+44-->[com.google.firebase:firebase-config:22.0.0] /Users/andrii/.gradle/caches/transforms-4/dc8aa06a70af34fda7867507fbcefd00/transformed/firebase-config-22.0.0/AndroidManifest.xml:33:17-117
+45                android:value="com.google.firebase.components.ComponentRegistrar" />
+45-->[com.google.firebase:firebase-config:22.0.0] /Users/andrii/.gradle/caches/transforms-4/dc8aa06a70af34fda7867507fbcefd00/transformed/firebase-config-22.0.0/AndroidManifest.xml:34:17-82
+46            <meta-data
+46-->[com.google.android.gms:play-services-measurement-api:22.0.2] /Users/andrii/.gradle/caches/transforms-4/708d7f4387c2f223069b5b73dcea6aea/transformed/play-services-measurement-api-22.0.2/AndroidManifest.xml:37:13-39:85
+47                android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar"
+47-->[com.google.android.gms:play-services-measurement-api:22.0.2] /Users/andrii/.gradle/caches/transforms-4/708d7f4387c2f223069b5b73dcea6aea/transformed/play-services-measurement-api-22.0.2/AndroidManifest.xml:38:17-139
+48                android:value="com.google.firebase.components.ComponentRegistrar" />
+48-->[com.google.android.gms:play-services-measurement-api:22.0.2] /Users/andrii/.gradle/caches/transforms-4/708d7f4387c2f223069b5b73dcea6aea/transformed/play-services-measurement-api-22.0.2/AndroidManifest.xml:39:17-82
+49            <meta-data
+49-->[com.google.firebase:firebase-abt:21.1.1] /Users/andrii/.gradle/caches/transforms-4/533a860137c40201a659ff939bdfa923/transformed/firebase-abt-21.1.1/AndroidManifest.xml:12:13-14:85
+50                android:name="com.google.firebase.components:com.google.firebase.abt.component.AbtRegistrar"
+50-->[com.google.firebase:firebase-abt:21.1.1] /Users/andrii/.gradle/caches/transforms-4/533a860137c40201a659ff939bdfa923/transformed/firebase-abt-21.1.1/AndroidManifest.xml:13:17-109
+51                android:value="com.google.firebase.components.ComponentRegistrar" />
+51-->[com.google.firebase:firebase-abt:21.1.1] /Users/andrii/.gradle/caches/transforms-4/533a860137c40201a659ff939bdfa923/transformed/firebase-abt-21.1.1/AndroidManifest.xml:14:17-82
+52            <meta-data
+52-->[com.google.firebase:firebase-crashlytics:19.0.3] /Users/andrii/.gradle/caches/transforms-4/d42bcc24de44685315aa53d8700b22e9/transformed/firebase-crashlytics-19.0.3/AndroidManifest.xml:15:13-17:85
+53                android:name="com.google.firebase.components:com.google.firebase.crashlytics.FirebaseCrashlyticsKtxRegistrar"
+53-->[com.google.firebase:firebase-crashlytics:19.0.3] /Users/andrii/.gradle/caches/transforms-4/d42bcc24de44685315aa53d8700b22e9/transformed/firebase-crashlytics-19.0.3/AndroidManifest.xml:16:17-126
+54                android:value="com.google.firebase.components.ComponentRegistrar" />
+54-->[com.google.firebase:firebase-crashlytics:19.0.3] /Users/andrii/.gradle/caches/transforms-4/d42bcc24de44685315aa53d8700b22e9/transformed/firebase-crashlytics-19.0.3/AndroidManifest.xml:17:17-82
+55            <meta-data
+55-->[com.google.firebase:firebase-crashlytics:19.0.3] /Users/andrii/.gradle/caches/transforms-4/d42bcc24de44685315aa53d8700b22e9/transformed/firebase-crashlytics-19.0.3/AndroidManifest.xml:18:13-20:85
+56                android:name="com.google.firebase.components:com.google.firebase.crashlytics.CrashlyticsRegistrar"
+56-->[com.google.firebase:firebase-crashlytics:19.0.3] /Users/andrii/.gradle/caches/transforms-4/d42bcc24de44685315aa53d8700b22e9/transformed/firebase-crashlytics-19.0.3/AndroidManifest.xml:19:17-115
+57                android:value="com.google.firebase.components.ComponentRegistrar" />
+57-->[com.google.firebase:firebase-crashlytics:19.0.3] /Users/andrii/.gradle/caches/transforms-4/d42bcc24de44685315aa53d8700b22e9/transformed/firebase-crashlytics-19.0.3/AndroidManifest.xml:20:17-82
+58            <meta-data
+58-->[com.google.firebase:firebase-sessions:2.0.3] /Users/andrii/.gradle/caches/transforms-4/6b9d4264098744dd66ee89f14a22fd76/transformed/firebase-sessions-2.0.3/AndroidManifest.xml:29:13-31:85
+59                android:name="com.google.firebase.components:com.google.firebase.sessions.FirebaseSessionsRegistrar"
+59-->[com.google.firebase:firebase-sessions:2.0.3] /Users/andrii/.gradle/caches/transforms-4/6b9d4264098744dd66ee89f14a22fd76/transformed/firebase-sessions-2.0.3/AndroidManifest.xml:30:17-117
+60                android:value="com.google.firebase.components.ComponentRegistrar" />
+60-->[com.google.firebase:firebase-sessions:2.0.3] /Users/andrii/.gradle/caches/transforms-4/6b9d4264098744dd66ee89f14a22fd76/transformed/firebase-sessions-2.0.3/AndroidManifest.xml:31:17-82
+61            <meta-data
+61-->[com.google.firebase:firebase-installations:18.0.0] /Users/andrii/.gradle/caches/transforms-4/14752fe9b85b71685bbff77416e11dfc/transformed/firebase-installations-18.0.0/AndroidManifest.xml:15:13-17:85
+62                android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsKtxRegistrar"
+62-->[com.google.firebase:firebase-installations:18.0.0] /Users/andrii/.gradle/caches/transforms-4/14752fe9b85b71685bbff77416e11dfc/transformed/firebase-installations-18.0.0/AndroidManifest.xml:16:17-130
+63                android:value="com.google.firebase.components.ComponentRegistrar" />
+63-->[com.google.firebase:firebase-installations:18.0.0] /Users/andrii/.gradle/caches/transforms-4/14752fe9b85b71685bbff77416e11dfc/transformed/firebase-installations-18.0.0/AndroidManifest.xml:17:17-82
+64            <meta-data
+64-->[com.google.firebase:firebase-installations:18.0.0] /Users/andrii/.gradle/caches/transforms-4/14752fe9b85b71685bbff77416e11dfc/transformed/firebase-installations-18.0.0/AndroidManifest.xml:18:13-20:85
+65                android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar"
+65-->[com.google.firebase:firebase-installations:18.0.0] /Users/andrii/.gradle/caches/transforms-4/14752fe9b85b71685bbff77416e11dfc/transformed/firebase-installations-18.0.0/AndroidManifest.xml:19:17-127
+66                android:value="com.google.firebase.components.ComponentRegistrar" />
+66-->[com.google.firebase:firebase-installations:18.0.0] /Users/andrii/.gradle/caches/transforms-4/14752fe9b85b71685bbff77416e11dfc/transformed/firebase-installations-18.0.0/AndroidManifest.xml:20:17-82
+67            <meta-data
+67-->[com.google.firebase:firebase-common-ktx:21.0.0] /Users/andrii/.gradle/caches/transforms-4/e29ec4ef7e62934d7983d702ab5993da/transformed/firebase-common-ktx-21.0.0/AndroidManifest.xml:12:13-14:85
+68                android:name="com.google.firebase.components:com.google.firebase.ktx.FirebaseCommonLegacyRegistrar"
+68-->[com.google.firebase:firebase-common-ktx:21.0.0] /Users/andrii/.gradle/caches/transforms-4/e29ec4ef7e62934d7983d702ab5993da/transformed/firebase-common-ktx-21.0.0/AndroidManifest.xml:13:17-116
+69                android:value="com.google.firebase.components.ComponentRegistrar" />
+69-->[com.google.firebase:firebase-common-ktx:21.0.0] /Users/andrii/.gradle/caches/transforms-4/e29ec4ef7e62934d7983d702ab5993da/transformed/firebase-common-ktx-21.0.0/AndroidManifest.xml:14:17-82
+70            <meta-data
+70-->[com.google.firebase:firebase-common:21.0.0] /Users/andrii/.gradle/caches/transforms-4/11aa06243bcda13bf8476fa92b4d855f/transformed/firebase-common-21.0.0/AndroidManifest.xml:35:13-37:85
+71                android:name="com.google.firebase.components:com.google.firebase.FirebaseCommonKtxRegistrar"
+71-->[com.google.firebase:firebase-common:21.0.0] /Users/andrii/.gradle/caches/transforms-4/11aa06243bcda13bf8476fa92b4d855f/transformed/firebase-common-21.0.0/AndroidManifest.xml:36:17-109
+72                android:value="com.google.firebase.components.ComponentRegistrar" />
+72-->[com.google.firebase:firebase-common:21.0.0] /Users/andrii/.gradle/caches/transforms-4/11aa06243bcda13bf8476fa92b4d855f/transformed/firebase-common-21.0.0/AndroidManifest.xml:37:17-82
+73            <meta-data
+73-->[com.google.firebase:firebase-datatransport:19.0.0] /Users/andrii/.gradle/caches/transforms-4/efd44db3c5b2c4fb77907714d35b7acf/transformed/firebase-datatransport-19.0.0/AndroidManifest.xml:25:13-27:85
+74                android:name="com.google.firebase.components:com.google.firebase.datatransport.TransportRegistrar"
+74-->[com.google.firebase:firebase-datatransport:19.0.0] /Users/andrii/.gradle/caches/transforms-4/efd44db3c5b2c4fb77907714d35b7acf/transformed/firebase-datatransport-19.0.0/AndroidManifest.xml:26:17-115
+75                android:value="com.google.firebase.components.ComponentRegistrar" />
+75-->[com.google.firebase:firebase-datatransport:19.0.0] /Users/andrii/.gradle/caches/transforms-4/efd44db3c5b2c4fb77907714d35b7acf/transformed/firebase-datatransport-19.0.0/AndroidManifest.xml:27:17-82
+76        </service>
+77
+78        <receiver
+78-->[com.google.android.gms:play-services-measurement:22.0.2] /Users/andrii/.gradle/caches/transforms-4/82d2cbcb153c73aed19ac696a3181799/transformed/play-services-measurement-22.0.2/AndroidManifest.xml:29:9-33:20
+79            android:name="com.google.android.gms.measurement.AppMeasurementReceiver"
+79-->[com.google.android.gms:play-services-measurement:22.0.2] /Users/andrii/.gradle/caches/transforms-4/82d2cbcb153c73aed19ac696a3181799/transformed/play-services-measurement-22.0.2/AndroidManifest.xml:30:13-85
+80            android:enabled="true"
+80-->[com.google.android.gms:play-services-measurement:22.0.2] /Users/andrii/.gradle/caches/transforms-4/82d2cbcb153c73aed19ac696a3181799/transformed/play-services-measurement-22.0.2/AndroidManifest.xml:31:13-35
+81            android:exported="false" >
+81-->[com.google.android.gms:play-services-measurement:22.0.2] /Users/andrii/.gradle/caches/transforms-4/82d2cbcb153c73aed19ac696a3181799/transformed/play-services-measurement-22.0.2/AndroidManifest.xml:32:13-37
+82        </receiver>
+83
+84        <service
+84-->[com.google.android.gms:play-services-measurement:22.0.2] /Users/andrii/.gradle/caches/transforms-4/82d2cbcb153c73aed19ac696a3181799/transformed/play-services-measurement-22.0.2/AndroidManifest.xml:35:9-38:40
+85            android:name="com.google.android.gms.measurement.AppMeasurementService"
+85-->[com.google.android.gms:play-services-measurement:22.0.2] /Users/andrii/.gradle/caches/transforms-4/82d2cbcb153c73aed19ac696a3181799/transformed/play-services-measurement-22.0.2/AndroidManifest.xml:36:13-84
+86            android:enabled="true"
+86-->[com.google.android.gms:play-services-measurement:22.0.2] /Users/andrii/.gradle/caches/transforms-4/82d2cbcb153c73aed19ac696a3181799/transformed/play-services-measurement-22.0.2/AndroidManifest.xml:37:13-35
+87            android:exported="false" />
+87-->[com.google.android.gms:play-services-measurement:22.0.2] /Users/andrii/.gradle/caches/transforms-4/82d2cbcb153c73aed19ac696a3181799/transformed/play-services-measurement-22.0.2/AndroidManifest.xml:38:13-37
+88        <service
+88-->[com.google.android.gms:play-services-measurement:22.0.2] /Users/andrii/.gradle/caches/transforms-4/82d2cbcb153c73aed19ac696a3181799/transformed/play-services-measurement-22.0.2/AndroidManifest.xml:39:9-43:72
+89            android:name="com.google.android.gms.measurement.AppMeasurementJobService"
+89-->[com.google.android.gms:play-services-measurement:22.0.2] /Users/andrii/.gradle/caches/transforms-4/82d2cbcb153c73aed19ac696a3181799/transformed/play-services-measurement-22.0.2/AndroidManifest.xml:40:13-87
+90            android:enabled="true"
+90-->[com.google.android.gms:play-services-measurement:22.0.2] /Users/andrii/.gradle/caches/transforms-4/82d2cbcb153c73aed19ac696a3181799/transformed/play-services-measurement-22.0.2/AndroidManifest.xml:41:13-35
+91            android:exported="false"
+91-->[com.google.android.gms:play-services-measurement:22.0.2] /Users/andrii/.gradle/caches/transforms-4/82d2cbcb153c73aed19ac696a3181799/transformed/play-services-measurement-22.0.2/AndroidManifest.xml:42:13-37
+92            android:permission="android.permission.BIND_JOB_SERVICE" />
+92-->[com.google.android.gms:play-services-measurement:22.0.2] /Users/andrii/.gradle/caches/transforms-4/82d2cbcb153c73aed19ac696a3181799/transformed/play-services-measurement-22.0.2/AndroidManifest.xml:43:13-69
+93
+94        <property
+94-->[com.google.android.gms:play-services-measurement-api:22.0.2] /Users/andrii/.gradle/caches/transforms-4/708d7f4387c2f223069b5b73dcea6aea/transformed/play-services-measurement-api-22.0.2/AndroidManifest.xml:30:9-32:61
+95            android:name="android.adservices.AD_SERVICES_CONFIG"
+95-->[com.google.android.gms:play-services-measurement-api:22.0.2] /Users/andrii/.gradle/caches/transforms-4/708d7f4387c2f223069b5b73dcea6aea/transformed/play-services-measurement-api-22.0.2/AndroidManifest.xml:31:13-65
+96            android:resource="@xml/ga_ad_services_config" />
+96-->[com.google.android.gms:play-services-measurement-api:22.0.2] /Users/andrii/.gradle/caches/transforms-4/708d7f4387c2f223069b5b73dcea6aea/transformed/play-services-measurement-api-22.0.2/AndroidManifest.xml:32:13-58
+97
+98        <service
+98-->[com.google.firebase:firebase-sessions:2.0.3] /Users/andrii/.gradle/caches/transforms-4/6b9d4264098744dd66ee89f14a22fd76/transformed/firebase-sessions-2.0.3/AndroidManifest.xml:22:9-25:40
+99            android:name="com.google.firebase.sessions.SessionLifecycleService"
+99-->[com.google.firebase:firebase-sessions:2.0.3] /Users/andrii/.gradle/caches/transforms-4/6b9d4264098744dd66ee89f14a22fd76/transformed/firebase-sessions-2.0.3/AndroidManifest.xml:23:13-80
+100            android:enabled="true"
+100-->[com.google.firebase:firebase-sessions:2.0.3] /Users/andrii/.gradle/caches/transforms-4/6b9d4264098744dd66ee89f14a22fd76/transformed/firebase-sessions-2.0.3/AndroidManifest.xml:24:13-35
+101            android:exported="false" />
+101-->[com.google.firebase:firebase-sessions:2.0.3] /Users/andrii/.gradle/caches/transforms-4/6b9d4264098744dd66ee89f14a22fd76/transformed/firebase-sessions-2.0.3/AndroidManifest.xml:25:13-37
+102
+103        <provider
+103-->[com.google.firebase:firebase-common:21.0.0] /Users/andrii/.gradle/caches/transforms-4/11aa06243bcda13bf8476fa92b4d855f/transformed/firebase-common-21.0.0/AndroidManifest.xml:23:9-28:39
+104            android:name="com.google.firebase.provider.FirebaseInitProvider"
+104-->[com.google.firebase:firebase-common:21.0.0] /Users/andrii/.gradle/caches/transforms-4/11aa06243bcda13bf8476fa92b4d855f/transformed/firebase-common-21.0.0/AndroidManifest.xml:24:13-77
+105            android:authorities="com.books.firebase.test.firebaseinitprovider"
+105-->[com.google.firebase:firebase-common:21.0.0] /Users/andrii/.gradle/caches/transforms-4/11aa06243bcda13bf8476fa92b4d855f/transformed/firebase-common-21.0.0/AndroidManifest.xml:25:13-72
+106            android:directBootAware="true"
+106-->[com.google.firebase:firebase-common:21.0.0] /Users/andrii/.gradle/caches/transforms-4/11aa06243bcda13bf8476fa92b4d855f/transformed/firebase-common-21.0.0/AndroidManifest.xml:26:13-43
+107            android:exported="false"
+107-->[com.google.firebase:firebase-common:21.0.0] /Users/andrii/.gradle/caches/transforms-4/11aa06243bcda13bf8476fa92b4d855f/transformed/firebase-common-21.0.0/AndroidManifest.xml:27:13-37
+108            android:initOrder="100" />
+108-->[com.google.firebase:firebase-common:21.0.0] /Users/andrii/.gradle/caches/transforms-4/11aa06243bcda13bf8476fa92b4d855f/transformed/firebase-common-21.0.0/AndroidManifest.xml:28:13-36
+109
+110        <uses-library
+110-->[androidx.privacysandbox.ads:ads-adservices:1.0.0-beta05] /Users/andrii/.gradle/caches/transforms-4/0be0ff7891d312ab067b7e691df3de86/transformed/ads-adservices-1.0.0-beta05/AndroidManifest.xml:23:9-25:40
+111            android:name="android.ext.adservices"
+111-->[androidx.privacysandbox.ads:ads-adservices:1.0.0-beta05] /Users/andrii/.gradle/caches/transforms-4/0be0ff7891d312ab067b7e691df3de86/transformed/ads-adservices-1.0.0-beta05/AndroidManifest.xml:24:13-50
+112            android:required="false" />
+112-->[androidx.privacysandbox.ads:ads-adservices:1.0.0-beta05] /Users/andrii/.gradle/caches/transforms-4/0be0ff7891d312ab067b7e691df3de86/transformed/ads-adservices-1.0.0-beta05/AndroidManifest.xml:25:13-37
+113
+114        <meta-data
+114-->[com.google.android.gms:play-services-basement:18.4.0] /Users/andrii/.gradle/caches/transforms-4/bcdfb97f2c687f90ef6c41ec06154067/transformed/play-services-basement-18.4.0/AndroidManifest.xml:6:9-122
+115            android:name="com.google.android.gms.version"
+115-->[com.google.android.gms:play-services-basement:18.4.0] /Users/andrii/.gradle/caches/transforms-4/bcdfb97f2c687f90ef6c41ec06154067/transformed/play-services-basement-18.4.0/AndroidManifest.xml:6:20-65
+116            android:value="@integer/google_play_services_version" />
+116-->[com.google.android.gms:play-services-basement:18.4.0] /Users/andrii/.gradle/caches/transforms-4/bcdfb97f2c687f90ef6c41ec06154067/transformed/play-services-basement-18.4.0/AndroidManifest.xml:6:66-119
+117
+118        <service
+118-->[com.google.android.datatransport:transport-backend-cct:3.3.0] /Users/andrii/.gradle/caches/transforms-4/3c1a50374acfb694263c46b122605aa6/transformed/transport-backend-cct-3.3.0/AndroidManifest.xml:26:9-32:19
+119            android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery"
+119-->[com.google.android.datatransport:transport-backend-cct:3.3.0] /Users/andrii/.gradle/caches/transforms-4/3c1a50374acfb694263c46b122605aa6/transformed/transport-backend-cct-3.3.0/AndroidManifest.xml:27:13-103
+120            android:exported="false" >
+120-->[com.google.android.datatransport:transport-backend-cct:3.3.0] /Users/andrii/.gradle/caches/transforms-4/3c1a50374acfb694263c46b122605aa6/transformed/transport-backend-cct-3.3.0/AndroidManifest.xml:28:13-37
+121            <meta-data
+121-->[com.google.android.datatransport:transport-backend-cct:3.3.0] /Users/andrii/.gradle/caches/transforms-4/3c1a50374acfb694263c46b122605aa6/transformed/transport-backend-cct-3.3.0/AndroidManifest.xml:29:13-31:39
+122                android:name="backend:com.google.android.datatransport.cct.CctBackendFactory"
+122-->[com.google.android.datatransport:transport-backend-cct:3.3.0] /Users/andrii/.gradle/caches/transforms-4/3c1a50374acfb694263c46b122605aa6/transformed/transport-backend-cct-3.3.0/AndroidManifest.xml:30:17-94
+123                android:value="cct" />
+123-->[com.google.android.datatransport:transport-backend-cct:3.3.0] /Users/andrii/.gradle/caches/transforms-4/3c1a50374acfb694263c46b122605aa6/transformed/transport-backend-cct-3.3.0/AndroidManifest.xml:31:17-36
+124        </service>
+125        <service
+125-->[com.google.android.datatransport:transport-runtime:3.3.0] /Users/andrii/.gradle/caches/transforms-4/5766eaed75380376afe6eb6eed1f83a1/transformed/transport-runtime-3.3.0/AndroidManifest.xml:24:9-28:19
+126            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService"
+126-->[com.google.android.datatransport:transport-runtime:3.3.0] /Users/andrii/.gradle/caches/transforms-4/5766eaed75380376afe6eb6eed1f83a1/transformed/transport-runtime-3.3.0/AndroidManifest.xml:25:13-117
+127            android:exported="false"
+127-->[com.google.android.datatransport:transport-runtime:3.3.0] /Users/andrii/.gradle/caches/transforms-4/5766eaed75380376afe6eb6eed1f83a1/transformed/transport-runtime-3.3.0/AndroidManifest.xml:26:13-37
+128            android:permission="android.permission.BIND_JOB_SERVICE" >
+128-->[com.google.android.datatransport:transport-runtime:3.3.0] /Users/andrii/.gradle/caches/transforms-4/5766eaed75380376afe6eb6eed1f83a1/transformed/transport-runtime-3.3.0/AndroidManifest.xml:27:13-69
+129        </service>
+130
+131        <receiver
+131-->[com.google.android.datatransport:transport-runtime:3.3.0] /Users/andrii/.gradle/caches/transforms-4/5766eaed75380376afe6eb6eed1f83a1/transformed/transport-runtime-3.3.0/AndroidManifest.xml:30:9-32:40
+132            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver"
+132-->[com.google.android.datatransport:transport-runtime:3.3.0] /Users/andrii/.gradle/caches/transforms-4/5766eaed75380376afe6eb6eed1f83a1/transformed/transport-runtime-3.3.0/AndroidManifest.xml:31:13-132
+133            android:exported="false" />
+133-->[com.google.android.datatransport:transport-runtime:3.3.0] /Users/andrii/.gradle/caches/transforms-4/5766eaed75380376afe6eb6eed1f83a1/transformed/transport-runtime-3.3.0/AndroidManifest.xml:32:13-37
+134    </application>
+135
+136</manifest>

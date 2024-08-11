@@ -26,3 +26,4 @@ include(
     ":core:common",
     ":core:data"
 )
+include(":core:firebase")
