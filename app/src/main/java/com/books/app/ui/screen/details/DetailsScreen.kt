@@ -5,9 +5,11 @@ import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.aspectRatio
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.pager.rememberPagerState
@@ -22,14 +24,12 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
-import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.books.app.R
 import com.books.app.ui.app_bar.DetailsTopBar
 import com.books.app.ui.dialog.BooksAlertDialog
 import com.books.app.ui.resources._16_Dp
-import com.books.app.ui.resources._18_Dp
 import com.books.app.ui.resources._20_Dp
 import com.books.app.ui.resources._24_Dp
 import com.books.app.ui.resources._48_Dp
@@ -66,8 +66,8 @@ private fun Header(
     Image(
         painter = painterResource(id = R.drawable.bg_details),
         contentDescription = null,
-        contentScale = ContentScale.FillWidth,
-        alignment = Alignment.TopCenter,
+        contentScale = ContentScale.Crop,
+        alignment = Alignment.Center,
         modifier = modifier
             .fillMaxSize()
     )
@@ -107,7 +107,7 @@ private fun DetailsScreenLoaded(
     }
 
     LaunchedEffect(key1 = state.currentBook) {
-        pagerState.animateScrollToPage(state.currentBookIndex)
+        pagerState.scrollToPage(state.currentBookIndex)
     }
 
     Box(modifier = modifier.fillMaxSize()) {
@@ -120,7 +120,7 @@ private fun DetailsScreenLoaded(
                         books = state.books,
                         pagerState = pagerState,
                         modifier = Modifier
-                            .height(350.dp)
+                            .aspectRatio(1.1f)
                     )
                 }
             }
@@ -129,7 +129,6 @@ private fun DetailsScreenLoaded(
                 Column(
                     modifier = Modifier
                         .fillMaxWidth()
-                        .padding(top = _18_Dp)
                         .background(
                             Color.White,
                             RoundedCornerShape(topStart = _20_Dp, topEnd = _20_Dp)
@@ -138,7 +137,9 @@ private fun DetailsScreenLoaded(
                 ) {
                     BookStatsRow(
                         stats = state.currentBook.stats,
-                        modifier = Modifier.height(_64_Dp)
+                        modifier = Modifier
+                            .padding(top = _20_Dp)
+                            .heightIn(min = _64_Dp)
                     )
                     BookSummaryItem(
                         summary = state.currentBook.summary,

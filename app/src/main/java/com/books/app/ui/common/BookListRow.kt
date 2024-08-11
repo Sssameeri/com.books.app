@@ -21,6 +21,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
 import coil.compose.AsyncImage
+import coil.request.CachePolicy
 import coil.request.ImageRequest
 import com.books.app.state.Book
 import com.books.app.ui.resources.NunitoSans
@@ -71,6 +72,7 @@ private fun BookListItem(
             model = ImageRequest.Builder(LocalContext.current)
                 .data(book.coverImage)
                 .crossfade(true)
+                .diskCachePolicy(CachePolicy.ENABLED)
                 .build(),
             contentDescription = contentDescription,
             contentScale = ContentScale.Crop,

@@ -4,24 +4,22 @@ import androidx.compose.animation.core.Spring
 import androidx.compose.animation.core.spring
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.gestures.detectHorizontalDragGestures
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.BoxScope
 import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.pager.HorizontalPager
 import androidx.compose.foundation.pager.PagerState
-import androidx.compose.foundation.pager.rememberPagerState
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material3.Card
-import androidx.compose.material3.CardDefaults
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -29,19 +27,20 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
-import androidx.compose.ui.tooling.preview.Preview
 import coil.compose.AsyncImage
+import coil.request.CachePolicy
 import coil.request.ImageRequest
 import com.books.app.state.PagerItem
 import com.books.app.ui.resources.PagerItemSelectedColor
 import com.books.app.ui.resources.PagerItemUnselectedColor
-import com.books.app.ui.resources._0_Dp
 import com.books.app.ui.resources._160_Dp
 import com.books.app.ui.resources._16_Dp
 import com.books.app.ui.resources._5_Dp
 import com.books.app.ui.resources._7_Dp
 import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
+import kotlin.time.Duration.Companion.seconds
 
 private val animationSpecs =
     spring<Float>(stiffness = Spring.StiffnessMediumLow)
@@ -73,7 +72,24 @@ fun BooksPager(
         }
     }
 
-    Box(modifier = modifier.fillMaxWidth()) {
+    LaunchedEffect(key1 = pagerState.settledPage) {
+        launch {
+            delay(3.seconds)
+            with(pagerState) {
+                val target = if (currentPage < pageCount - 1) currentPage + 1 else 0
+                animateScrollToPage(
+                    page = target,
+                    animationSpec = animationSpecs
+                )
+            }
+        }
+    }
+
+    Box(
+        modifier = modifier
+            .fillMaxWidth()
+            .clip(RoundedCornerShape(_16_Dp))
+    ) {
         HorizontalPager(state = pagerState) { page ->
             val item = items[page]
             BooksPagerItem(
@@ -135,22 +151,17 @@ private fun BooksPagerItem(
     modifier: Modifier = Modifier,
     contentDescription: String = "books pager item",
 ) {
-    Card(
+    AsyncImage(
+        model = ImageRequest.Builder(LocalContext.current)
+            .data(item.imageUrl)
+            .crossfade(true)
+            .diskCachePolicy(CachePolicy.ENABLED)
+            .build(),
+        contentDescription = contentDescription,
+        contentScale = ContentScale.Crop,
         modifier = modifier
+            .fillMaxWidth()
             .height(_160_Dp)
-            .fillMaxWidth(),
-        onClick = { onItemClick(item.bookId) },
-        elevation = CardDefaults.cardElevation(_0_Dp),
-        shape = RoundedCornerShape(_16_Dp)
-    ) {
-        AsyncImage(
-            model = ImageRequest.Builder(LocalContext.current)
-                .data(item.imageUrl)
-                .crossfade(true)
-                .build(),
-            modifier = Modifier.fillMaxSize(),
-            contentDescription = contentDescription,
-            contentScale = ContentScale.Crop
-        )
-    }
+            .clickable { onItemClick(item.bookId) }
+    )
 }

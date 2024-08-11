@@ -25,6 +25,7 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.util.lerp
 import coil.compose.AsyncImage
+import coil.request.CachePolicy
 import coil.request.ImageRequest
 import com.books.app.state.Book
 import com.books.app.ui.resources.NunitoSans
@@ -98,6 +99,7 @@ private fun BookPagerItem(
             model = ImageRequest.Builder(LocalContext.current)
                 .data(book.coverImage)
                 .crossfade(true)
+                .diskCachePolicy(CachePolicy.ENABLED)
                 .build(),
             contentDescription = "Book name: ${book.coverTitle}",
             contentScale = ContentScale.Crop,
@@ -126,6 +128,9 @@ private fun BookPagerItem(
             fontWeight = FontWeight.Bold,
             color = Color.White.copy(alpha = 0.8f),
             fontSize = _14_Sp,
+            maxLines = 1,
+            textAlign = TextAlign.Center,
+            overflow = TextOverflow.Ellipsis,
             lineHeight = _16_Sp,
             modifier = Modifier
                 .padding(top = _4_Dp)

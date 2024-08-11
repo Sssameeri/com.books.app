@@ -8,6 +8,7 @@ val _4_Dp = 4.dp
 val _5_Dp = 5.dp
 val _7_Dp = 7.dp
 val _8_Dp = 8.dp
+val _10_Dp = 10.dp
 val _12_Dp = 12.dp
 val _14_Dp = 14.dp
 val _16_Dp = 16.dp
