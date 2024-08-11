@@ -1,10 +1,17 @@
 package com.books.data.repository
 
-import com.books.data.model.RemoteApiModel
+import com.books.data.model.BannerItemApiModel
+import com.books.data.model.BookItemApiModel
 import kotlinx.coroutines.flow.Flow
 
 interface BooksRepository {
 
-    fun loadBooksData(): Flow<RemoteApiModel>
+    suspend fun fetchBooksData()
+    suspend fun fetchDetailedBooksInfo(): List<BookItemApiModel>
 
+    //like UseCases but without domain layer
+    fun observeBannersData(): Flow<List<BannerItemApiModel>>
+    fun observeBooksData(): Flow<List<BookItemApiModel>>
+
+    suspend fun getRecommendations(): List<BookItemApiModel>
 }

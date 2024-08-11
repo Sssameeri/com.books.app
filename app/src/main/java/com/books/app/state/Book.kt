@@ -1,21 +1,33 @@
 package com.books.app.state
 
+import com.books.app.ui.screen.details.StatsProperty
+import com.books.data.model.BookItemApiModel
+
 data class Book(
     val id: Int,
     val coverTitle: String,
     val coverImage: String,
     val author: String,
-    val summary: String =
-        """
-            According to researchers at Duke University, habits 
-            account for about 40 percent of our behaviors on
-            any given day. Your life today is essentially the sum 
-            of your habits. How in shape or out of shape 
-            you are? A result of your habits. How happy or unhappy 
-            you are? A result of your habits. How successful 
-            or unsuccessful you are? A result of your habits.
-            or unsuccessful you are? A result of your habits.
-            or unsuccessful you are? A result of your habits.
-            or unsuccessful you are? A result of your habits.
-        """.trimIndent()
-)
+    val summary: String,
+    val stats: List<StatsProperty>
+) {
+
+    companion object {
+
+        fun fromApiModel(apiModel: BookItemApiModel) = apiModel.run {
+            Book(
+                id = id,
+                coverImage = coverUrl,
+                coverTitle = name,
+                author = author,
+                summary = summary,
+                stats = StatsProperty.listOfFromApiModel(this)
+            )
+        }
+
+        fun listOfFromApiModel(books : List<BookItemApiModel> ) =
+            books.map { fromApiModel(it) }
+
+    }
+
+}

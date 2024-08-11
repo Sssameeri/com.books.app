@@ -39,7 +39,7 @@ class BooksAppState(
         )
 
     fun navigateDetailsScreen(bookId: Int) {
-        navController.navigate(BooksAppNavigation.Details.route)
+        navController.navigate(BooksAppNavigation.Details.createRoute(bookId))
     }
 
     fun navigateBack() {

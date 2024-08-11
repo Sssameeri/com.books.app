@@ -29,7 +29,6 @@ import androidx.compose.ui.unit.sp
 import androidx.compose.ui.util.lerp
 import coil.compose.AsyncImage
 import coil.request.ImageRequest
-import com.books.app.state.BooksFactory
 import com.books.app.state.Book
 import com.books.app.ui.resources.NunitoSans
 import com.books.app.ui.resources._16_Dp
@@ -58,8 +57,8 @@ fun DetailsBookPager(
                 horizontal = horizontalPadding
             ),
             pageSize = PageSize.Fixed(IMAGE_SIZE_DP),
-            modifier = modifier
-                .fillMaxWidth()
+            key = { books[it].id },
+            modifier = modifier.fillMaxWidth()
         ) { page ->
             val book = books[page]
             BookPagerItem(
@@ -129,17 +128,4 @@ private fun BookPagerItem(
                 .padding(top = _4_Dp)
         )
     }
-
-}
-
-@OptIn(ExperimentalFoundationApi::class)
-@Preview
-@Composable
-private fun Preview_BookPagerItem() {
-    DetailsBookPager(
-        books = BooksFactory.books,
-        pagerState = rememberPagerState {
-            BooksFactory.books.size
-        }
-    )
 }

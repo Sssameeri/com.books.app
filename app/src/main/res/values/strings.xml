@@ -11,4 +11,8 @@
     <string name="you_will_also_like_title">You will also like</string>
     <string name="read_now_button_cta">Read Now</string>
     <string name="splash_screen_description">Welcome to Book App</string>
+    <string name="whoops_error_title">Whoops!</string>
+    <string name="no_internet_error_message_text">You lost internet connection</string>
+    <string name="default_error_title">Error</string>
+    <string name="default_error_message_text">Error while loading books</string>
 </resources>

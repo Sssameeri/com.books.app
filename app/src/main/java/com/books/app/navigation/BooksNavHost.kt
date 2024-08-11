@@ -2,8 +2,10 @@ package com.books.app.navigation
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.navigation.NavType
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
+import androidx.navigation.navArgument
 import com.books.app.ui.BooksAppState
 import com.books.app.ui.screen.details.DetailsScreen
 import com.books.app.ui.screen.main.MainScreen
@@ -23,7 +25,10 @@ fun BooksNavHost(
                 onBookClicked = { id -> appState.navigateDetailsScreen(id) }
             )
         }
-        composable(BooksAppNavigation.Details.route) {
+        composable(
+            BooksAppNavigation.Details.route,
+            arguments = listOf(navArgument(ARG_BOOK_ID_KEY) { type = NavType.StringType })
+        ) {
             DetailsScreen(
                 onBackClick = { appState.navigateBack() }
             )
@@ -31,7 +36,11 @@ fun BooksNavHost(
     }
 }
 
+const val ARG_BOOK_ID_KEY = "bookId"
+
 sealed class BooksAppNavigation(val route: String) {
-    data object Main : BooksAppNavigation("Main")
-    data object Details : BooksAppNavigation("Details")
+    data object Main : BooksAppNavigation("main")
+    data object Details : BooksAppNavigation("details/{$ARG_BOOK_ID_KEY}") {
+        fun createRoute(bookId: Int) = "details/$bookId"
+    }
 }

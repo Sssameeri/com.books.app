@@ -30,9 +30,6 @@ fun BookSummaryItem(
     summary: String,
     modifier: Modifier = Modifier
 ) {
-    var expanded by rememberSaveable {
-        mutableStateOf(false)
-    }
     Column(
         modifier = modifier
             .animateContentSize()
@@ -54,10 +51,7 @@ fun BookSummaryItem(
             color = SummaryTextColor,
             fontFamily = NunitoSans,
             fontWeight = FontWeight.SemiBold,
-            overflow = TextOverflow.Ellipsis,
-            maxLines = if (expanded) summary.lines().size else 7,
-            modifier = Modifier
-                .clickable { expanded = !expanded }
+            overflow = TextOverflow.Ellipsis
         )
 
         HorizontalDivider(
