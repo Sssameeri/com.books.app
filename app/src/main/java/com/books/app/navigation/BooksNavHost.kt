@@ -6,7 +6,9 @@ import androidx.navigation.NavType
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.navArgument
-import com.books.app.navigation.BooksAppNavigation.*
+import com.books.app.navigation.BooksAppNavigation.Details
+import com.books.app.navigation.BooksAppNavigation.Main
+import com.books.app.navigation.BooksAppNavigation.Splash
 import com.books.app.ui.BooksAppState
 import com.books.app.ui.screen.details.DetailsScreen
 import com.books.app.ui.screen.main.MainScreen

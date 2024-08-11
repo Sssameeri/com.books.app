@@ -1,6 +1,10 @@
 package com.books.app.ui.app_bar
 
+import androidx.compose.foundation.layout.WindowInsets
+import androidx.compose.foundation.layout.asPaddingValues
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.safeDrawing
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
@@ -20,7 +24,13 @@ fun MainTopBar(
     modifier: Modifier = Modifier
 ) {
     TopAppBar(
-        modifier = modifier.fillMaxWidth(),
+        modifier = modifier
+            .fillMaxWidth()
+            .padding(
+                top = WindowInsets.safeDrawing
+                    .asPaddingValues()
+                    .calculateTopPadding()
+            ),
         colors = TopAppBarDefaults.topAppBarColors().copy(
             containerColor = BlackBackground
         ),

@@ -37,10 +37,11 @@ import com.books.app.ui.screen.main.viewmodel.MainScreenViewModel
 fun MainScreen(
     onBackPressed: () -> Unit,
     onBookClicked: (Int) -> Unit,
-    viewModel: MainScreenViewModel = hiltViewModel()
+    modifier: Modifier = Modifier,
+    viewModel: MainScreenViewModel = hiltViewModel(),
 ) {
     when (val state = viewModel.state.collectAsStateWithLifecycle().value) {
-        is Loaded -> MainScreenLoaded(state, onBackPressed, onBookClicked)
+        is Loaded -> MainScreenLoaded(state, onBackPressed, onBookClicked, modifier)
         Error -> MainScreenError()
         Loading -> MainScreenLoading()
     }
@@ -75,7 +76,8 @@ private fun MainScreenError() {
 private fun MainScreenLoaded(
     state: Loaded,
     onBackPressed: () -> Unit,
-    onBookClicked: (Int) -> Unit
+    onBookClicked: (Int) -> Unit,
+    modifier: Modifier = Modifier
 ) {
     BackHandler(enabled = true) {
         onBackPressed()
@@ -83,7 +85,8 @@ private fun MainScreenLoaded(
 
     Scaffold(
         topBar = { MainTopBar() },
-        containerColor = BlackBackground
+        containerColor = BlackBackground,
+        modifier = modifier
     ) { paddingValues ->
         LazyColumn(
             modifier = Modifier

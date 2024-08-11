@@ -3,9 +3,9 @@ package com.books.app.ui.screen.details
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.aspectRatio
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
@@ -68,8 +68,7 @@ private fun Header(
         contentDescription = null,
         contentScale = ContentScale.Crop,
         alignment = Alignment.Center,
-        modifier = modifier
-            .fillMaxSize()
+        modifier = modifier.fillMaxSize()
     )
 }
 
@@ -110,17 +109,23 @@ private fun DetailsScreenLoaded(
         pagerState.scrollToPage(state.currentBookIndex)
     }
 
-    Box(modifier = modifier.fillMaxSize()) {
+    Box(
+        modifier = modifier.fillMaxSize()
+    ) {
         Header()
         LazyColumn {
             item {
-                Column(modifier = Modifier.fillMaxWidth()) {
+                Column(
+                    modifier = Modifier
+                        .fillMaxWidth(),
+                    horizontalAlignment = Alignment.CenterHorizontally,
+                    verticalArrangement = Arrangement.Center
+                ) {
                     DetailsTopBar(onBackClick = onBackClick)
                     DetailsBookPager(
                         books = state.books,
                         pagerState = pagerState,
-                        modifier = Modifier
-                            .aspectRatio(1.1f)
+                        modifier = Modifier.padding(bottom = _16_Dp)
                     )
                 }
             }

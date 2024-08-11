@@ -29,8 +29,8 @@ fun BookSummaryItem(
 ) {
     Column(
         modifier = modifier
-            .animateContentSize()
             .fillMaxWidth()
+            .animateContentSize()
     ) {
         Text(
             text = stringResource(R.string.summary),
@@ -40,9 +40,9 @@ fun BookSummaryItem(
             fontSize = _20_Sp,
             lineHeight = _22_Sp,
             letterSpacing = _01_Sp,
-            modifier = Modifier
-                .padding(bottom = _8_Dp)
+            modifier = Modifier.padding(bottom = _8_Dp)
         )
+
         Text(
             text = summary,
             color = SummaryTextColor,
@@ -52,8 +52,7 @@ fun BookSummaryItem(
         )
 
         HorizontalDivider(
-            modifier = Modifier
-                .padding(top = _16_Dp)
+            modifier = Modifier.padding(top = _16_Dp)
         )
     }
 }
